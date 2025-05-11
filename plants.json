@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Aloe Vera",
+    "sunlight": "Indirect sunlight",
+    "watering": "Once a week",
+    "soil": "Well-drained soil",
+    "image": "data:image/jpeg;base64,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"
+  },
+  {
+    "name": "Snake Plant",
+    "sunlight": "Low to bright light",
+    "watering": "Every 2–3 weeks",
+    "soil": "Free-draining soil",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_L1nuhFzb0BMXrwSsk0-oCW1vRriTqrmwiQ&s"
+  },
+  {
+    "name": "Peace Lily",
+    "sunlight": "Low to medium light",
+    "watering": "Once a week",
+    "soil": "Moist, well-drained soil",
+    "image": "https://cdn.shopify.com/s/files/1/0824/4857/files/1200-6314-peace-lily-photo1_1024x1024.jpg?v=1555816045"
+  },
+  {
+    "name": "Spider Plant",
+    "sunlight": "Bright, indirect sunlight",
+    "watering": "Every 1–2 weeks",
+    "soil": "Well-drained potting mix",
+    "image": "https://5.imimg.com/data5/QH/MT/MY-10776067/air-purifying-spider-plant-in-orange-bucket-aroez-ceramic-pot-500x500.png"
+  },
+  {
+    "name": "ZZ Plant",
+    "sunlight": "Low to bright light",
+    "watering": "Every 2–3 weeks",
+    "soil": "Well-draining potting mix",
+    "image": "https://www.thespruce.com/thmb/91lcnKHknVrEg65fUNFa7bewPm4=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-propagate-zz-plant-7197596-hero-a05c32a73f36453d94af2f6dc0b9511b.jpg"
+  },
+  {
+    "name": "Rubber Plant",
+    "sunlight": "Bright, indirect light",
+    "watering": "When topsoil is dry",
+    "soil": "Well-aerated potting mix",
+    "image": "https://gardengram.in/cdn/shop/products/RubberPlant.jpg?v=1709008734"
+  },
+  {
+    "name": "Areca Palm",
+    "sunlight": "Bright, filtered light",
+    "watering": "Twice a week",
+    "soil": "Loamy soil",
+    "image": "https://bloomingfloret.in/cdn/shop/files/2_31.jpg?v=1704869814"
+  },
+  {
+    "name": "Pothos",
+    "sunlight": "Low to bright indirect light",
+    "watering": "Every 1–2 weeks",
+    "soil": "Well-draining soil",
+    "image": "https://gardengram.in/cdn/shop/products/image_cea33587-782c-4540-9f61-a8cb53adfb9f.jpg?v=1708768071"
+  },
+  {
+    "name": "Boston Fern",
+    "sunlight": "Indirect sunlight",
+    "watering": "Keep soil moist",
+    "soil": "Rich, well-drained soil",
+    "image": "https://plantura.garden/uk/wp-content/uploads/sites/2/2022/04/boston-fern-leaves-1024x683.jpg?x54327"
+  },
+  {
+    "name": "Jade Plant",
+    "sunlight": "Direct sunlight",
+    "watering": "Every 2–3 weeks",
+    "soil": "Cactus potting mix",
+    "image": "https://www.marthastewart.com/thmb/wfMSnhZFCSX45OgGrC37o8YWFcI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/grow-care-for-jade-plant-outside-getty-1123-6f0b4051fcd14580886a5431bc05b176.jpg"
+  }
+]

@@ -1,0 +1,140 @@
+/* Reset + Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #e0f2f1, #a8e6cf, #56ab91); /* Mint green to teal */
+    min-height: 100vh;
+    padding: 30px;
+    color: #111;
+  }
+  
+  /* Glassy Container */
+  .tip-card, .tip-box, .form-glass {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(90, 200, 120, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .tip-card:hover, .tip-box:hover, .form-glass:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  }
+  
+  /* Headings & Text */
+  .tip-card h3, .tip-box h4 {
+    margin-bottom: 8px;
+    color: #000;
+  }
+  
+  .tip-card p, .tip-box p {
+    color: #111;
+    font-size: 1rem;
+  }
+  
+  /* Badge (Category Chips) */
+  .badge {
+    padding: 4px 12px;
+    border-radius: 14px;
+    font-size: 0.75rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin-left: 6px;
+  }
+  
+  .badge.prep { background: #27ae60; }
+  .badge.watering { background: #16a085; }
+  .badge.planting { background: #2ecc71; }
+  .badge.planning { background: #1abc9c; }
+  
+  /* Season Emoji */
+  .season-emoji {
+    margin-right: 8px;
+    font-size: 1.2rem;
+  }
+  
+  /* Favorite Icon */
+  .favorite-icon {
+    cursor: pointer;
+    float: right;
+    font-size: 1.4rem;
+    transition: transform 0.2s;
+    user-select: none;
+  }
+  
+  .favorite-icon:hover {
+    transform: scale(1.25);
+  }
+  
+  /* Accordion Tip Body */
+  .tip-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+  
+  .tip-body.open {
+    max-height: 400px;
+    padding-top: 12px;
+  }
+  
+  /* Form Styling */
+  .form-glass input,
+  .form-glass textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(90, 200, 120, 0.4);
+    background: rgba(255, 255, 255, 0.4);
+    color: #000;
+    margin-bottom: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-glass input:focus,
+  .form-glass textarea:focus {
+    border-color: #2ecc71;
+    background: rgba(255, 255, 255, 0.6);
+    outline: none;
+    color: #000;
+  }
+  
+  /* Submit Button */
+  .form-glass button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(90deg, #38ef7d, #11998e);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .form-glass button:hover {
+    background: linear-gradient(90deg, #2fdc72, #0fb48b);
+  }
+  .season-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 14px;
+    background: rgba(90, 200, 120, 0.2);
+    color: #000;           /* black text */
+    font-weight: bold;     /* bold text */
+    margin-top: 6px;
+    margin-right: 6px;
+    font-size: 0.85rem;
+    backdrop-filter: blur(6px);
+  }
+  

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pest Identification</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/care-guides.css" />
+    <link rel="stylesheet" href="css/plant-journal.css" />
+    <link rel="stylesheet" href="css/seasonal-tips.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/challenges.css" />
+    <link rel="stylesheet" href="css/footer.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="dashboard.html" class="logo">🌿 GardenAssist</a>
+      
+      <div class="nav-items">
+        <a href="dashboard.html" class="nav-item active">Home</a>
+        <a href="pest-and-disease.html" class="nav-item">Pest ID</a>
+        <a href="seasonal-tips.html" class="nav-item">Seasonal Tips</a>
+        <a href="gardening-challenges.html" class="nav-item">Gardening Challenges</a>
+      </div>
+    </nav>
+    
+    <style>
+    .navbar {
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.6)
+      );
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1rem 2rem;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2e7d32;
+      cursor: pointer;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      text-decoration: none;
+    }
+    
+    .nav-items {
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    
+    .nav-item {
+      text-decoration: none;
+      color: #2e7d32;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-weight: 500;
+    }
+    
+    .nav-item.active {
+      background: rgba(110, 192, 125, 0.2);
+      font-weight: bold;
+    }
+    
+    .nav-item:hover {
+      background: rgba(110, 192, 125, 0.3);
+    }
+    </style>
+    <style>
+      /* Hover effects */
+      .navbar a:hover {
+        background: rgba(76, 175, 80, 0.1);
+      }
+      .navbar a[href="#gardenForm"]:hover {
+        background: #3d8b40;
+      }
+
+      /* Active tab indicator - add this class to current page link */
+      .navbar a.active-tab {
+        background: rgba(76, 175, 80, 0.1);
+        font-weight: bold;
+      }
+    </style>
+
+    <div class="pest-section">
+      <h3>🌱 Pest and Disease Identification</h3>
+
+      <!-- Issue Selection Form -->
+      <form id="pestForm">
+        <label for="issueSelect">Select the issue affecting your plant:</label>
+        <select id="issueSelect">
+          <option value="">Choose an issue</option>
+          <option value="pest">Pest Infestation</option>
+          <option value="disease">Plant Disease</option>
+          <option value="yellowLeaves">Yellow Leaves</option>
+          <option value="wilting">Wilting</option>
+          <option value="brownSpots">Brown Spots</option>
+        </select>
+        <button type="submit">Get Treatment</button>
+      </form>
+
+      <!-- Dynamic Treatment Information -->
+      <div id="treatmentInfo">
+        <!-- Treatment info will be displayed here -->
+      </div>
+    </div>
+
+    <div class="forum-container">
+      <h3>🌱 Gardening Community Forum</h3>
+
+      <!-- Forum Post Form -->
+      <div class="forum-post-form">
+        <h4>Post a Question/Tip</h4>
+        <form id="forumPostForm">
+          <div class="form-group">
+            <label for="postTitle">Title:</label>
+            <input
+              type="text"
+              id="postTitle"
+              placeholder="Post Title"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="postContent">Content:</label>
+            <textarea
+              id="postContent"
+              placeholder="Write your post..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Post</button>
+        </form>
+      </div>
+
+      <!-- Forum Posts -->
+      <div id="forumPosts">
+        <!-- Posts will be dynamically displayed here -->
+      </div>
+    </div>
+
+    <footer class="button-footer">
+        <div class="footer-container">
+          <div class="button-group">
+            <button class="nav-btn prev-btn" onclick="goPrevious()">
+              ← Previous Page
+            </button>
+  
+            <button class="nav-btn home-btn" onclick="goHome()">🏠 Home</button>
+  
+            <button class="nav-btn next-btn" onclick="goNext()">
+              Next Page →
+            </button>
+          </div>
+  
+          <div class="footer-info">
+            <p class="copyright">© Developed by Divanshu Manchanda. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+  
+      <script>
+        function goPrevious() {
+          window.location.href = "dashboard.html";
+        }
+        function goHome() {
+          window.location.href = "dashboard.html";
+        }
+        function goNext() {
+          window.location.href = "seasonal-tips.html";
+        }
+      </script>
+
+    <script type="module" src="js/weather.js"></script>
+    <script type="module" src="js/care-guides.js"></script>
+    <script type="module" src="js/challenges.js"></script>
+    <script type="module" src="js/plant-journal.js"></script>
+    <script type="module" src="js/seasonal-tips.js"></script>
+    <script type="module" src="js/community-forum.js"></script>
+    <script type="module" src="js/pests.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+    <script type="module" src="js/upload-plants.js"></script>
+  </body>
+</html>

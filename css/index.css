@@ -1,0 +1,98 @@
+/* general reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* body styling */
+body {
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* container styling with glassmorphism */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* headings */
+h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  color: black; /* Changed from white to black */
+  font-size: 16px;
+  outline: none;
+}
+
+input::placeholder {
+  color: black;
+}
+
+/* login button */
+button {
+  width: 100%;
+  background: rgba(0, 106, 255, 0.9);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: rgba(0, 106, 255, 1);
+}
+
+/* paragraph message */
+p {
+  color: black;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+/* link styling */
+a {
+  color: #f7fc00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* mobile responsive */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}

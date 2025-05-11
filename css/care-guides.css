@@ -1,0 +1,209 @@
+/* Care Guides Section - Glassmorphism Background */
+.care-guides-section {
+    padding: 2.5rem 1.5rem;
+    background: linear-gradient(135deg, rgba(240, 253, 244, 0.9), rgba(232, 250, 240, 0.9));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .care-guides-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 
+      0 8px 32px rgba(30, 111, 60, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+
+  
+  .care-guides-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+      0 12px 40px rgba(30, 111, 60, 0.15),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.92);
+  }
+  
+  /* Header with Nature Accent */
+  .care-guides-container h2 {
+    margin-bottom: 1.25rem;
+    color: #1e6f3c;
+    font-size: 1.85rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .care-guides-container h2::before {
+    content: "🌱";
+    font-size: 1.5rem;
+  }
+  
+  /* Stylish Region Selector */
+  #regionSelect {
+    padding: 0.75rem;
+    margin-bottom: 1.75rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(76, 175, 80, 0.4);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    box-shadow: 
+      0 2px 8px rgba(30, 111, 60, 0.05),
+      inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231e6f3c'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+  }
+  
+  #regionSelect:focus {
+    outline: none;
+    border-color: rgba(76, 175, 80, 0.8);
+    box-shadow: 
+      0 0 0 3px rgba(76, 175, 80, 0.2),
+      inset 0 1px 2px rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Guide Output - Matte Glass Panel */
+  .guide-output {
+    padding: 1.5rem;
+    background: rgba(248, 255, 249, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid rgba(209, 231, 212, 0.6);
+    box-shadow: 
+      inset 0 1px 3px rgba(255, 255, 255, 0.6),
+      0 4px 12px rgba(30, 111, 60, 0.08);
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .guide-output::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg, 
+      rgba(129, 199, 132, 0.05) 0%, 
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    pointer-events: none;
+  }
+  
+  .guide-output h3 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .guide-output h3::before {
+    content: "📗";
+    font-size: 1.2rem;
+  }
+  
+  .guide-output ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .guide-output li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.75rem;
+    position: relative;
+    color: #2d4a30;
+    line-height: 1.5;
+  }
+  
+  .guide-output li::before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  
+  /* Weather Info - Glossy Card */
+  .weather-info {
+    margin-top: 1.25rem;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, rgba(224, 247, 250, 0.85), rgba(212, 242, 245, 0.9));
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #006064;
+    border: 1px solid rgba(178, 235, 242, 0.5);
+    box-shadow: 
+      0 4px 12px rgba(0, 96, 100, 0.08),
+      inset 0 1px 2px rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .weather-info::before {
+    content: "☀️";
+    font-size: 1.5rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .care-guides-section {
+      padding: 1.5rem 1rem;
+    }
+    
+    .care-guides-container {
+      padding: 1.5rem;
+      border-radius: 16px;
+    }
+    
+    .guide-output {
+      padding: 1.25rem;
+    }
+    
+    .weather-info {
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .guide-output,
+  .weather-info {
+    animation: fadeIn 0.5s ease-out forwards;
+  }

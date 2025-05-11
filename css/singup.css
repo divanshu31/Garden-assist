@@ -1,0 +1,120 @@
+/* reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2, #80deea); /* aquatic blue gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* premium glass container */
+  .container {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 20px;
+    box-shadow: 
+      0 8px 32px rgba(31, 38, 135, 0.15),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    padding: 40px 35px;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+  }
+  
+  /* heading with subtle text shadow */
+  h2 {
+    color: #263238;
+    margin-bottom: 28px;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  /* enhanced input fields */
+  input, select {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #263238;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  input:focus, select:focus {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  input::placeholder {
+    color: #78909c;
+    opacity: 0.8;
+  }
+  
+  /* premium button with gradient */
+  button {
+    width: 100%;
+    background: linear-gradient(135deg, #26a69a, #00897b);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(38, 166, 154, 0.2);
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #00897b, #00796b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(38, 166, 154, 0.3);
+  }
+  
+  /* refined typography */
+  p {
+    font-size: 15px;
+    color: #455a64;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  
+  a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  a:hover {
+    color: #00695c;
+    text-decoration: underline;
+  }
+  
+  /* responsive adjustments */
+  @media (max-width: 480px) {
+    .container {
+      padding: 35px 25px;
+      border-radius: 16px;
+    }
+    
+    h2 {
+      font-size: 24px;
+    }
+  }

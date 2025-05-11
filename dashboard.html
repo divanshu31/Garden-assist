@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Page</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/care-guides.css" />
+    <link rel="stylesheet" href="css/plant-journal.css" />
+    <link rel="stylesheet" href="css/seasonal-tips.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/challenges.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/garden-tracker.css">
+    <link rel="stylesheet" href="css/ai-plant-care.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="dashboard.html" class="logo">🌿 GardenAssist</a>
+      
+      <div class="nav-items">
+        <a href="dashboard.html" class="nav-item active">Home</a>
+        <a href="pest-and-disease.html" class="nav-item">Pest ID</a>
+        <a href="seasonal-tips.html" class="nav-item">Seasonal Tips</a>
+        <a href="gardening-challenges.html" class="nav-item">Gardening Challenges</a>
+      </div>
+    </nav>
+    
+    <style>
+    .navbar {
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.6)
+      );
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1rem 2rem;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2e7d32;
+      cursor: pointer;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      text-decoration: none;
+    }
+    
+    .nav-items {
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    
+    .nav-item {
+      text-decoration: none;
+      color: #2e7d32;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-weight: 500;
+    }
+    
+    .nav-item.active {
+      background: rgba(110, 192, 125, 0.2);
+      font-weight: bold;
+    }
+    
+    .nav-item:hover {
+      background: rgba(110, 192, 125, 0.3);
+    }
+    </style>
+    <style>
+      /* Hover effects */
+      .navbar a:hover {
+        background: rgba(76, 175, 80, 0.1);
+      }
+      .navbar a[href="#gardenForm"]:hover {
+        background: #3d8b40;
+      }
+
+      /* Active tab indicator - add this class to current page link */
+      .navbar a.active-tab {
+        background: rgba(76, 175, 80, 0.1);
+        font-weight: bold;
+      }
+    </style>
+
+    <div class="container">
+      <h3
+        style="
+          font-family: Arial, sans-serif;
+          font-size: 22px;
+          font-weight: bold;
+          color: #fdfd00;
+        "
+      >
+        Welcome,
+        <span style="color: #fdfd00; font-weight: bold"
+          ><span id="user-email"></span
+        ></span>
+        (<span style="color: #fdfd00; font-weight: bold"
+          ><span id="user-role"></span></span
+        >)
+      </h3>
+      <button id="logout-btn">Logout</button>
+      <div id="notes-container">
+        <h3>Sticky Notes</h3>
+        <textarea id="note-input" placeholder="Write a note..."></textarea>
+        <button id="add-note-btn">Add Note</button>
+        <div id="notes-list"></div>
+      </div>
+    </div>
+
+    <hr />
+    <div style="text-align: center; margin-top: 15px">
+      <h2 style="color: yellow; text-align: center">Garden Tracker</h2>
+    </div>
+
+    <!-- <form id="gardenForm">
+      <input type="text" id="plantName" placeholder="Plant Name" required />
+      <input type="date" id="plantDate" required />
+      <textarea
+        id="plantNotes"
+        placeholder="Notes (e.g., watered today)"
+      ></textarea>
+      <button type="submit">Add Entry</button>
+    </form>
+
+    <div id="gardenLog"></div>
+    <div id="watering-reminder"></div>
+    <br /><br /> -->
+
+
+
+    <br><br><br><br><br>
+    <div class="garden-app">
+      <header class="app-header">
+        <h1>🌿 My Garden Journal</h1>
+        <p>Track your plants, growth, and notes!</p>
+      </header>
+  
+      <main class="app-main">
+        <!-- Plant Entry Form -->
+        <section class="plant-form">
+          <h2>Add a New Plant</h2>
+          <form id="addPlantForm">
+            <div class="form-group">
+              <label for="plantName">Plant Name</label>
+              <input type="text" id="plantName" placeholder="e.g., Tomato, Rose" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="plantDate">Planting Date</label>
+              <input type="date" id="plantDate" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="plantNotes">Notes</label>
+              <textarea id="plantNotes" placeholder="Any special care instructions?"></textarea>
+            </div>
+  
+            <button type="submit" class="submit-btn">Add to Garden</button>
+          </form>
+        </section>
+  
+        <!-- Plant Entries Display -->
+        <section class="plant-list">
+          <h2>Your Plants</h2>
+          <div id="plantsContainer">
+            <!-- Entries will load here -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+
+    <!-- On dashboard.html -->
+
+    <footer class="button-footer">
+      <div class="footer-container">
+        <div class="button-group">
+          <button class="nav-btn prev-btn" onclick="goPrevious()">
+            ← Previous Page
+          </button>
+
+          <button class="nav-btn home-btn" onclick="goHome()">🏠 Home</button>
+
+          <button class="nav-btn next-btn" onclick="goNext()">
+            Next Page →
+          </button>
+        </div>
+
+        <div class="footer-info">
+          <p class="copyright">
+            © Developed by Divanshu Manchanda. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function goPrevious() {
+        window.location.href = "#";
+      }
+      function goHome() {
+        window.location.href = "dashboard.html";
+      }
+      function goNext() {
+        window.location.href = "pest-and-disease.html";
+      }
+    </script>
+
+    
+    <script type="module" src="js/weather.js"></script>
+    <script type="module" src="js/care-guides.js"></script>
+    <script type="module" src="js/challenges.js"></script>
+    <script type="module" src="js/plant-journal.js"></script>
+    <script type="module" src="js/seasonal-tips.js"></script>
+    <script type="module" src="js/community-forum.js"></script>
+    <script type="module" src="js/pests.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+    <script type="module" src="js/upload-plants.js"></script>
+    <script type="module" src="js/garden-tracker.js"></script>
+  </body>
+</html>

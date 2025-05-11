@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gardening Challenges</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/care-guides.css" />
+    <link rel="stylesheet" href="css/plant-journal.css" />
+    <link rel="stylesheet" href="css/seasonal-tips.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/challenges.css" />
+    <link rel="stylesheet" href="css/footer.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="dashboard.html" class="logo">🌿 GardenAssist</a>
+      
+      <div class="nav-items">
+        <a href="dashboard.html" class="nav-item active">Home</a>
+        <a href="pest-and-disease.html" class="nav-item">Pest ID</a>
+        <a href="seasonal-tips.html" class="nav-item">Seasonal Tips</a>
+        <a href="gardening-challenges.html" class="nav-item">Gardening Challenges</a>
+      </div>
+    </nav>
+    
+    <style>
+    .navbar {
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.6)
+      );
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1rem 2rem;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2e7d32;
+      cursor: pointer;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      text-decoration: none;
+    }
+    
+    .nav-items {
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    
+    .nav-item {
+      text-decoration: none;
+      color: #2e7d32;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-weight: 500;
+    }
+    
+    .nav-item.active {
+      background: rgba(110, 192, 125, 0.2);
+      font-weight: bold;
+    }
+    
+    .nav-item:hover {
+      background: rgba(110, 192, 125, 0.3);
+    }
+    </style>
+    <style>
+      /* Hover effects */
+      .navbar a:hover {
+        background: rgba(76, 175, 80, 0.1);
+      }
+      .navbar a[href="#gardenForm"]:hover {
+        background: #3d8b40;
+      }
+
+      /* Active tab indicator - add this class to current page link */
+      .navbar a.active-tab {
+        background: rgba(76, 175, 80, 0.1);
+        font-weight: bold;
+      }
+    </style>
+    <h2
+      style="
+        color: #2e7d32;
+        font-size: 1.8rem;
+        margin: 1.5rem auto; /* Changed to auto for horizontal centering */
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #a5d6a7;
+        display: flex; /* Changed from inline-flex */
+        justify-content: center; /* Added for centering */
+        align-items: center;
+        gap: 0.5rem;
+        width: fit-content; /* Ensures border only spans text width */
+      "
+    >
+      🌿 Gardening Challenges
+    </h2>
+
+    <div id="challengeList"></div>
+
+    <div id="challengeDetailModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" onclick="closeChallengeModal()">&times;</span>
+        <h3 id="challengeTitle"></h3>
+        <p id="challengeDescription"></p>
+        <small id="challengeDates"></small>
+
+        <form id="challengeSubmissionForm">
+          <input type="file" id="challengePhoto" accept="image/*" required />
+          <textarea
+            id="challengeCaption"
+            placeholder="Write a caption..."
+            required
+          ></textarea>
+          <button type="submit">Submit Entry</button>
+        </form>
+
+        <h4>Entries</h4>
+        <div id="challengeEntriesContainer"></div>
+      </div>
+    </div>
+
+    <div id="challengeList"></div>
+
+    <section class="care-guides-section">
+      <div class="care-guides-container">
+        <h2>🌍 Localized Plant Care Guides</h2>
+        <label for="regionSelect">Select your climate zone:</label>
+        <select id="regionSelect">
+          <option value="tropical">Tropical</option>
+          <option value="temperate">Temperate</option>
+          <option value="arid">Arid</option>
+          <option value="continental">Continental</option>
+          <option value="polar">Polar</option>
+        </select>
+
+        <div id="careGuideOutput" class="guide-output"></div>
+      </div>
+    </section>
+
+    <div id="weatherInfo" class="weather-info">
+      <p>Fetching current temperature...</p>
+    </div>
+
+    <footer class="button-footer">
+        <div class="footer-container">
+          <div class="button-group">
+            <button class="nav-btn prev-btn" onclick="goPrevious()">
+              ← Previous Page
+            </button>
+  
+            <button class="nav-btn home-btn" onclick="goHome()">🏠 Home</button>
+  
+            <button class="nav-btn next-btn" onclick="goNext()">
+              Next Page →
+            </button>
+          </div>
+  
+          <div class="footer-info">
+            <p class="copyright">© Developed by Divanshu Manchanda. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+  
+      <script>
+        function goPrevious() {
+          window.location.href = "seasonal-tips.html";
+        }
+        function goHome() {
+          window.location.href = "dashboard.html";
+        }
+        function goNext() {
+          window.location.href = "#";
+        }
+      </script>
+
+
+    <script type="module" src="js/weather.js"></script>
+    <script type="module" src="js/care-guides.js"></script>
+    <script type="module" src="js/challenges.js"></script>
+    <script type="module" src="js/plant-journal.js"></script>
+    <script type="module" src="js/seasonal-tips.js"></script>
+    <script type="module" src="js/community-forum.js"></script>
+    <script type="module" src="js/pests.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+    <script type="module" src="js/upload-plants.js"></script>
+  </body>
+</html>
