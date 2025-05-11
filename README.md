@@ -14,13 +14,13 @@ A beautiful web app to help gardening enthusiasts track plants, identify pests, 
 ##🌱 Gardening Community Forum
 ![image](https://github.com/user-attachments/assets/3e4fce9e-b79e-4650-9ad3-93e2e4a27bf6)
 
-##Plant Journal:-
+## Plant Journal:-
 ![{2171EADD-D154-46CD-AB38-81BB87FDFE28}](https://github.com/user-attachments/assets/ff1ebec5-f7dd-4bd8-8ebd-624c75270b28)
 
-##Gardening Challenges :- 
+## Gardening Challenges :- 
 ![{6E21A529-86C0-40EF-B495-31CC74019AB4}](https://github.com/user-attachments/assets/e68bf801-56ba-45d5-ae68-deaf5272b7e3)
 
-##🌍 Localized Plant Care Guides -
+## 🌍 Localized Plant Care Guides -
 ![image](https://github.com/user-attachments/assets/6fd45b04-843e-45b3-b505-4e7ea409666d)
 
 
