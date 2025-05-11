@@ -38,7 +38,6 @@ A beautiful web app to help gardening enthusiasts track plants, identify pests, 
 
 Access the live app: [HomeGardeningAssistant.app](https://heroic-stardust-901a75.netlify.app/)
 
-Test Credentials:
 
 
 ## 🛠️ Tech Stack
@@ -54,11 +53,45 @@ Test Credentials:
 - CSS animations
 
 ## 📦 Project Structure
-HomeGardeningAssistant/
-├── css/ # Stylesheets
-├── js/ # JavaScript modules
-├── images/ # Image assets
-├── index.html # Main page
-├── pest-and-disease.html # Pest ID feature
-├── seasonal-tips.html # Seasonal advice
-└── gardening-challenges.html # Challenges
+home_gardening_app/
+├── js/
+│ ├── ai-plant-care.js # AI plant care recommendations
+│ ├── auth.js # Authentication logic
+│ ├── care-guides.js # Plant care guide functionality
+│ ├── challenges.js # Gardening challenges
+│ ├── community-forum.js # Forum functionality
+│ ├── dashboard.js # Dashboard controller
+│ ├── garden-tracker.js # Plant tracking system
+│ ├── pests.js # Pest identification
+│ ├── plant-journal.js # Journal entries
+│ ├── seasonal-tips.js # Seasonal advice
+│ ├── upload-plants.js # Plant image uploads
+│ ├── weather.js # Weather API integration
+│ └── firebase-config.js # Firebase configuration
+├── html/
+│ ├── ai-plant-care.html # AI recommendations page
+│ ├── dashboard.html # Main dashboard
+│ ├── gardening-challenges.html # Challenges page
+│ ├── index.html # Homepage
+│ ├── pest-and-disease.html # Pest identification
+│ ├── seasonal-tips.html # Seasonal advice
+│ └── signup.html # Registration page
+└── data/
+└── plants.json # Plant database
+
+
+### Key Features by File:
+
+1. **Core Functionality**:
+   - `auth.js` + `firebase-config.js`: User authentication system
+   - `dashboard.js` + `dashboard.html`: Main application hub
+
+2. **Special Features**:
+   - `ai-plant-care.js`: AI-powered recommendations
+   - `pests.js`: Pest identification system
+   - `weather.js`: Localized weather integration
+
+3. **Data Files**:
+   - `plants.json`: Plant database storage
+   - `firebase-config.js`: Service configuration
+
