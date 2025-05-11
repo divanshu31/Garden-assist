@@ -2,7 +2,27 @@
 
 A beautiful web app to help gardening enthusiasts track plants, identify pests, and connect with a community - built with HTML, CSS, JavaScript and Firebase.
 
-![App Preview](/screenshots/app-preview.jpg)
+## 🌱 Plant Database :-
+![{39EB4903-1855-46FC-9E2F-41D7ABED9C40}](https://github.com/user-attachments/assets/203b39f0-cb79-48c5-8f97-43079e088a95)
+
+## 🌿 My Garden Journal :-
+![{A8261B82-6C74-4F2E-A563-64277CFB68C2}](https://github.com/user-attachments/assets/c3b0be06-76d2-4b80-aaeb-c48ada9bffd7)
+
+## 🌱 Pest and Disease Identification :-
+![{DB655DA5-DFAF-4675-8100-79A16107780B}](https://github.com/user-attachments/assets/4827047f-4fa5-4f5f-aa01-c11d282d129d)
+
+##🌱 Gardening Community Forum
+![image](https://github.com/user-attachments/assets/3e4fce9e-b79e-4650-9ad3-93e2e4a27bf6)
+
+##Plant Journal:-
+![{2171EADD-D154-46CD-AB38-81BB87FDFE28}](https://github.com/user-attachments/assets/ff1ebec5-f7dd-4bd8-8ebd-624c75270b28)
+
+##Gardening Challenges :- 
+![{6E21A529-86C0-40EF-B495-31CC74019AB4}](https://github.com/user-attachments/assets/e68bf801-56ba-45d5-ae68-deaf5272b7e3)
+
+##🌍 Localized Plant Care Guides -
+![image](https://github.com/user-attachments/assets/6fd45b04-843e-45b3-b505-4e7ea409666d)
+
 
 ## ✨ Features
 
@@ -16,7 +36,7 @@ A beautiful web app to help gardening enthusiasts track plants, identify pests, 
 
 ## 🚀 Demo
 
-Access the live app: [HomeGardeningAssistant.app](https://your-app-url.netlify.app)
+Access the live app: [HomeGardeningAssistant.app](https://heroic-stardust-901a75.netlify.app/)
 
 Test Credentials:
 
